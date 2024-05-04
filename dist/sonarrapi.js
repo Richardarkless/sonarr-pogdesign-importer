@@ -8,7 +8,7 @@ class SonarrApi {
     }
     lookupSeries(term) {
         term = encodeURIComponent(term);
-        const url = `${this.url}/api/series/lookup?term=${term}`;
+        const url = `${this.url}/api/v3/series/lookup?term=${term}`;
         return node_fetch_1.default(url, {
             headers: {
                 'X-Api-Key': this.apiKey
@@ -16,7 +16,7 @@ class SonarrApi {
         });
     }
     addSeries(series) {
-        const url = `${this.url}/api/series`;
+        const url = `${this.url}/api/v3/series`;
         return node_fetch_1.default(url, {
             headers: {
                 'X-Api-Key': this.apiKey
@@ -26,7 +26,7 @@ class SonarrApi {
         });
     }
     getProfiles() {
-        const url = `${this.url}/api/profile`;
+        const url = `${this.url}/api/v3/profile`;
         return node_fetch_1.default(url, {
             headers: {
                 'X-Api-Key': this.apiKey
@@ -34,7 +34,7 @@ class SonarrApi {
         });
     }
     getPaths() {
-        const url = `${this.url}/api/rootfolder`;
+        const url = `${this.url}/api/v3/rootfolder`;
         return node_fetch_1.default(url, {
             headers: {
                 'X-Api-Key': this.apiKey
@@ -42,7 +42,7 @@ class SonarrApi {
         });
     }
     getSeries() {
-        const url = `${this.url}/api/series`;
+        const url = `${this.url}/api/v3/series`;
         return node_fetch_1.default(url, {
             headers: {
                 'X-Api-Key': this.apiKey
