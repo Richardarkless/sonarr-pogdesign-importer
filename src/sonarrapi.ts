@@ -13,7 +13,7 @@ class SonarrApi {
 
     lookupSeries(term: string) {
         term = encodeURIComponent(term);
-        const url: string = `${this.url}/api/series/lookup?term=${term}`;
+        const url: string = `${this.url}/api/v3/series/lookup?term=${term}`;
 
         return fetch(url, {
             headers: {
@@ -23,7 +23,7 @@ class SonarrApi {
     }
 
     addSeries(series: ISeries) {
-        const url: string = `${this.url}/api/series`;
+        const url: string = `${this.url}/api/v3/series`;
 
         return fetch(url, {
             headers: {
@@ -35,7 +35,7 @@ class SonarrApi {
     }
 
     getProfiles() {
-        const url: string = `${this.url}/api/profile`;
+        const url: string = `${this.url}/api/v3/profile`;
 
         return fetch(url, {
             headers: {
@@ -45,7 +45,7 @@ class SonarrApi {
     }
 
     getPaths() {
-        const url: string = `${this.url}/api/rootfolder`;
+        const url: string = `${this.url}/api/v3/rootfolder`;
 
         return fetch(url, {
             headers: {
@@ -55,7 +55,7 @@ class SonarrApi {
     }
 
     getSeries() {
-        const url: string = `${this.url}/api/series`;
+        const url: string = `${this.url}/api/v3/series`;
 
         return fetch(url, {
             headers: {
